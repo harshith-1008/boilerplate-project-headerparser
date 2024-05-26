@@ -11,11 +11,11 @@ app.get("/", function (req, res) {
 });
 
 app.get("/api/whoami", function (req, res) {
-  const ipAdress = req.ip;
-  const lang = req.get("Accept language");
+  const ipAddress = req.ip;
+  const lang = req.get("Accept-language");
   const browser = req.get("User-agent");
 
-  res.json({ ipadress: ipAdress, language: lang, software: browser });
+  res.json({ ipaddress: ipAddress, language: lang, software: browser });
 });
 
 var listener = app.listen(process.env.PORT || 3000, function () {
